@@ -1,0 +1,46 @@
+2026-11-02T13:28:39.248+02:00  INFO 7161 --- [books] [restartedMain] com.example.books.BooksApplication       : Starting BooksApplication using Java 26.0.2.1 with PID 7161 (/mnt/d9b5e64f-5b87-4831-9221-ca9b780adb6f/Labs_/Java/Books/target/classes started by rey in /mnt/d9b5e64f-5b87-4831-9221-ca9b780adb6f/Labs_/Java/Books)
+2026-11-02T13:28:39.250+02:00 DEBUG 7161 --- [books] [restartedMain] com.example.books.BooksApplication       : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-02T13:28:39.251+02:00  INFO 7161 --- [books] [restartedMain] com.example.books.BooksApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-02T13:28:39.304+02:00  INFO 7161 --- [books] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-02T13:28:39.304+02:00  INFO 7161 --- [books] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-11-02T13:28:39.898+02:00  INFO 7161 --- [books] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-02T13:28:39.934+02:00  INFO 7161 --- [books] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interface.
+2026-11-02T13:28:40.385+02:00  INFO 7161 --- [books] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-02T13:28:40.394+02:00  INFO 7161 --- [books] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-02T13:28:40.394+02:00  INFO 7161 --- [books] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-02T13:28:40.417+02:00  INFO 7161 --- [books] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1112 ms
+2026-11-02T13:28:40.586+02:00  INFO 7161 --- [books] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-02T13:28:40.629+02:00  INFO 7161 --- [books] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-02T13:28:40.921+02:00  INFO 7161 --- [books] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-02T13:28:40.941+02:00  INFO 7161 --- [books] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-02T13:28:41.072+02:00  INFO 7161 --- [books] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/booksdb user=SA
+2026-11-02T13:28:41.073+02:00  INFO 7161 --- [books] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-02T13:28:41.112+02:00  INFO 7161 --- [books] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:file:./data/booksdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: BOOKSDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-02T13:28:41.697+02:00  INFO 7161 --- [books] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-02T13:28:41.739+02:00  INFO 7161 --- [books] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-02T13:28:41.794+02:00  INFO 7161 --- [books] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-02T13:28:42.249+02:00  INFO 7161 --- [books] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-02T13:28:42.316+02:00  INFO 7161 --- [books] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-02T13:28:42.324+02:00  INFO 7161 --- [books] [restartedMain] com.example.books.BooksApplication       : Started BooksApplication in 3.461 seconds (process running for 3.865)
+2026-11-02T13:28:42.709+02:00  INFO 7161 --- [books] [restartedMain] c.example.books.config.DataInitializer   : Seeded 8 books from data/books.csv
+2026-11-02T13:29:31.285+02:00  INFO 7161 --- [books] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-02T13:29:31.286+02:00  INFO 7161 --- [books] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-02T13:29:31.287+02:00  INFO 7161 --- [books] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-02T13:30:45.020+02:00 DEBUG 7161 --- [books] [http-nio-8080-exec-5] c.e.books.controller.BookController      : GET /api/books author=null
+2026-11-02T13:30:45.020+02:00  INFO 7161 --- [books] [http-nio-8080-exec-5] c.example.books.service.BookServiceImpl  : Request to get all Books
+2026-11-02T13:31:19.873+02:00  INFO 7161 --- [books] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-02T13:31:19.876+02:00  INFO 7161 --- [books] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-02T13:31:19.880+02:00  INFO 7161 --- [books] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-02T13:31:19.901+02:00  INFO 7161 --- [books] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-02T13:31:19.902+02:00  INFO 7161 --- [books] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
