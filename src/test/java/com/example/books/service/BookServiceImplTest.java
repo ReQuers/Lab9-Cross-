@@ -3,6 +3,8 @@ package com.example.books.service;
 import com.example.books.entity.Book;
 import com.example.books.exception.BookNotFoundException;
 import com.example.books.repository.BookRepository;
+import com.example.books.repository.PurchaseRepository;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -25,6 +27,8 @@ class BookServiceImplTest {
 
     @Mock
     private BookRepository repository;
+    @Mock 
+    private PurchaseRepository purchaseRepository;
 
     @InjectMocks
     private BookServiceImpl bookService;
@@ -120,6 +124,11 @@ class BookServiceImplTest {
 
         verify(repository, never()).deleteById(anyLong());
     }
+    @Test 
+    void deleteBook_whenHasPurchases_shouldThrowConflict(){
+
+    }
+
 
     private List<Book> genBookList() {
         return List.of(
