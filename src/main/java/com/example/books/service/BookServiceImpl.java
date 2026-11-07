@@ -1,8 +1,11 @@
 package com.example.books.service;
 
 import com.example.books.entity.Book;
+import com.example.books.exception.BookInUseException;
 import com.example.books.exception.BookNotFoundException;
 import com.example.books.repository.BookRepository;
+import com.example.books.repository.PurchaseRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -15,9 +18,10 @@ public class BookServiceImpl implements BookService {
     private static final Logger logger = LoggerFactory.getLogger(BookServiceImpl.class);
 
     private final BookRepository bookRepository;
-
-    public BookServiceImpl(BookRepository bookRepository) {
+    private final PurchaseRepository purchaseRepository;
+    public BookServiceImpl(BookRepository bookRepository,PurchaseRepository purchaseRepository) {
         this.bookRepository = bookRepository;
+        this.purchaseRepository = purchaseRepository;
     }
 
     @Override
@@ -65,6 +69,10 @@ public class BookServiceImpl implements BookService {
         if (!bookRepository.existsById(id)) {
             logger.warn("Cannot delete: Book with id={} not found", id);
             throw new BookNotFoundException(id);
+        }
+        if(purchaseRepository.existsByBookId(id)){
+            logger.warn("Cannot delete: Book with id={} exists");
+            throw new BookInUseException(id);
         }
         bookRepository.deleteById(id);
     }
